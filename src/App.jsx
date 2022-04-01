@@ -4,6 +4,7 @@ import Header from "./Components/Header/Header";
 import Nav from "./Components/Nav/Nav";
 
 import Home from "./Pages/Home/Home";
+import Channel from "./Pages/Channel/Channel";
 import Error from "./Pages/Error/Error";
 
 import "./App.scss";
@@ -18,6 +19,7 @@ function App() {
 
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/channel/:channelId" element={<Channel />} />
           <Route path="/*" element={<Error />} />
         </Routes>
       </main>

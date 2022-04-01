@@ -1,0 +1,29 @@
+@import "../../Sass/Variables.scss";
+
+.post{
+  width: 250px;
+}
+
+.post__image {
+  margin-bottom: 10px;
+  border-radius: 14px;
+  object-fit: cover;
+}
+
+.post__title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: $heading-color-light;
+
+  &::first-letter{
+    text-transform: uppercase;
+  }
+}
+
+.App--dark{
+  .post__title{
+    color: $heading-color-dark;
+  }
+}

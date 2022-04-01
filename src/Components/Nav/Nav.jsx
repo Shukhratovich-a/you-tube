@@ -52,9 +52,7 @@ const Nav = () => {
             <span className="nav__item__text">Subscription</span>
           </NavLink>
         </li>
-      </ul>
 
-      <ul className="nav__list">
         <li className="nav__item">
           <NavLink
             className={({ isActive }) => `nav__link ${isActive ? "nav__link--active" : ""}`}

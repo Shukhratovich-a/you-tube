@@ -1,6 +1,13 @@
-const UserIcon = ({ width = 20, height = 20 }) => {
+const UserIcon = ({ className = "", width = 20, height = 20 }) => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width={width} height={height}>
+    <svg
+      className={className}
+      style={{ display: "flex" }}
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 50 50"
+      width={width}
+      height={height}
+    >
       <defs>
         <mask id="a" x="1.67" y="1.67" width="46.67" height="48.33" maskUnits="userSpaceOnUse">
           <circle
