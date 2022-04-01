@@ -21,4 +21,8 @@
   line-height: 33px;
   text-decoration: none;
   color: $heading-color-light;
+
+  &:hover{
+    text-decoration: underline;
+  }
 }
