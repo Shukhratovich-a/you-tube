@@ -3,8 +3,37 @@
 .nav {
   flex-shrink: 0;
   width: 255px;
+  height: calc(100vh - 94px);
   padding-right: 30px;
   padding-left: 30px;
+  overflow: overlay;
+
+  &::-webkit-scrollbar {
+    width: 0px;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+  &:hover {
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+  }
 
   &--open {
     width: 80px;
@@ -101,6 +130,7 @@
     display: flex;
     align-items: center;
     width: 100%;
+    height: auto;
     padding: 12px 0;
     border-top: 1px solid $button-hover-color-light;
   }
@@ -120,27 +150,7 @@
       margin: 0;
     }
 
-    &:nth-child(5) {
-      display: none;
-    }
-
-    &:nth-child(6) {
-      display: none;
-    }
-
-    &:nth-child(7) {
-      display: none;
-    }
-
-    &:nth-child(8) {
-      display: none;
-    }
-
-    &:nth-child(9) {
-      display: none;
-    }
-
-    &:nth-child(10) {
+    &:nth-child(4) ~ & {
       display: none;
     }
   }

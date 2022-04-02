@@ -32,8 +32,14 @@ body {
   flex-direction: column;
   font-family: "Mulish", "Arial", sans-serif;
   font-size: 16px;
+  font-weight: 400;
   margin: 0;
   padding: 0;
+  // overflow-x: overlay;
+
+  &::-webkit-scrollbar{
+    display: none;
+  }
 }
 
 button,
@@ -49,6 +55,7 @@ img {
 
 main {
   flex-grow: 1;
+  overflow: hidden;
 }
 
 .container {

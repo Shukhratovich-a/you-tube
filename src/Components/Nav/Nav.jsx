@@ -129,6 +129,17 @@ const Nav = () => {
             <span className="nav__item__text">Games</span>
           </NavLink>
         </li>
+
+        <li className="nav__item">
+          <NavLink
+            className={({ isActive }) => `nav__link ${isActive ? "nav__link--active" : ""}`}
+            to={"/games"}
+          >
+            <Games />
+
+            <span className="nav__item__text">More</span>
+          </NavLink>
+        </li>
       </ul>
     </nav>
   );
