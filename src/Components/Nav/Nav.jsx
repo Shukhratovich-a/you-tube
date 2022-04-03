@@ -11,7 +11,7 @@ import Favourites from "../Lib/Icons/Favourites";
 import Likes from "../Lib/Icons/Likes";
 import Music from "../Lib/Icons/Music";
 import Games from "../Lib/Icons/Games";
-import More from "../Lib/Icons/More";
+import ArrowDown from "../Lib/Icons/ArrowDown";
 
 import "./Nav.scss";
 
@@ -136,7 +136,7 @@ const Nav = () => {
             className={({ isActive }) => `nav__link ${isActive ? "nav__link--active" : ""}`}
             to={"/more"}
           >
-            <More />
+            <ArrowDown />
 
             <span className="nav__item__text">Show more</span>
           </NavLink>

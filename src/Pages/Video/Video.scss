@@ -1,6 +1,32 @@
-@import '../../Sass/Variables.scss';
+@import "../../Sass/Variables.scss";
 
 .video {
+  flex-grow: 1;
+  overflow-y: overlay;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+}
+
+.video__left {
   max-width: 1360px;
   width: 100%;
 }
@@ -16,6 +42,7 @@
 
 .video__heading {
   margin: 0;
+  margin-bottom: 4px;
   font-weight: 700;
   font-size: 36px;
   line-height: 45px;
@@ -26,8 +53,97 @@
   }
 }
 
-.App--dark{
-  .video__heading{
+.video__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba($color: #d8d8d8, $alpha: 0.5);
+}
+
+.video__info__count {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 25px;
+  color: $text-color-light;
+}
+
+.video__info__list {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  margin-right: 40px;
+  padding: 0;
+  list-style-type: none;
+}
+
+.video__info__item {
+  & + & {
+    margin-left: 10px;
+  }
+}
+
+.video__info__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  background-color: $input-color-light;
+  cursor: pointer;
+
+  svg {
+    display: flex;
+  }
+}
+
+.video__info__text {
+  margin-left: 8px;
+  font-size: 16px;
+  line-height: 20px;
+  color: $heading-color-light;
+}
+
+.video__info__inner {
+  display: flex;
+  align-items: center;
+}
+
+.video__inner__button {
+  margin: 0;
+  padding: 0;
+  color: $heading-color-light;
+  border: none;
+  outline: none;
+  background-color: transparent;
+
+  svg {
+    display: flex;
+  }
+}
+
+.App--dark {
+  .video__heading {
+    color: $heading-color-dark;
+  }
+
+  .video__info__count {
+    color: $text-color-dark;
+  }
+
+  .video__info__button {
+    color: $button-color-dark;
+    background-color: $input-color-dark;
+  }
+
+  .video__info__text {
+    color: $heading-color-dark;
+  }
+
+  .video__inner__button {
     color: $heading-color-dark;
   }
 }
