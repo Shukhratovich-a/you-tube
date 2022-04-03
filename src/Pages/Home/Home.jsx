@@ -8,7 +8,9 @@ import User from "../../Components/Lib/Icons/User";
 import "./Home.scss";
 
 const Home = () => {
-  const [posts, setPosts] = React.useState([]);
+  const [postsTop, setPostsTop] = React.useState([]);
+  const [postsRecommended, setPostsRecommended] = React.useState([]);
+  const [postsBottom, setPostsBottom] = React.useState([]);
 
   React.useEffect(() => {
     (async () => {
@@ -17,7 +19,9 @@ const Home = () => {
       const data = await response.json();
 
       if (data) {
-        setPosts(data.slice(0, 10));
+        setPostsTop(data.slice(0, 10));
+        setPostsRecommended(data.slice(10, 20));
+        setPostsBottom(data.slice(20, 30));
       }
     })();
   }, []);
@@ -34,7 +38,7 @@ const Home = () => {
         </div>
 
         <PostsList className={"posts"}>
-          {posts.length > 0 && posts.map((post) => <Post key={post.id} post={post} />)}
+          {postsTop.length > 0 && postsTop.map((post) => <Post key={post.id} post={post} />)}
         </PostsList>
       </div>
 
@@ -43,7 +47,19 @@ const Home = () => {
           <h2 className="home__recommended__title">Recommended</h2>
 
           <PostsList className={"recommended"}>
-            {posts.length > 0 && posts.map((post) => <Post key={post.id} post={post} />)}
+            {postsRecommended.length > 0 &&
+              postsRecommended.map((post) => <Post key={post.id} post={post} />)}
+          </PostsList>
+        </div>
+      </div>
+
+      <div className="home__bottom">
+        <div className="home__bottom">
+          <h2 className="home__bottom__title">Food & Drink</h2>
+
+          <PostsList className={"bottom"}>
+            {postsBottom.length > 0 &&
+              postsBottom.map((post) => <Post key={post.id} post={post} />)}
           </PostsList>
         </div>
       </div>

@@ -37,9 +37,13 @@ body {
   padding: 0;
   // overflow-x: overlay;
 
-  &::-webkit-scrollbar{
+  &::-webkit-scrollbar {
     display: none;
   }
+}
+
+#root {
+  height: inherit;
 }
 
 button,
@@ -67,13 +71,23 @@ main {
 
 .main {
   display: flex;
+  max-height: calc(100% - 94px);
   padding-left: 0;
 }
 
 .App {
+  height: inherit;
+  color: $heading-color-light;
   background-color: $bg-color-light;
 
   &--dark {
+    color: $heading-color-dark;
     background-color: $bg-color-dark;
+  }
+}
+
+@media only screen and(max-width: 768px) {
+  .main{
+    max-height: inherit;
   }
 }

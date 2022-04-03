@@ -1,0 +1,39 @@
+@import '../../Sass/Variables.scss';
+
+.video {
+  max-width: 1360px;
+  width: 100%;
+}
+
+.video__image {
+  max-width: 1360px;
+  width: 100%;
+  max-height: 700px;
+  min-height: 180px;
+  margin-bottom: 20px;
+  border-radius: 14px;
+}
+
+.video__heading {
+  margin: 0;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 45px;
+  color: $heading-color-light;
+
+  &::first-letter {
+    text-transform: uppercase;
+  }
+}
+
+.App--dark{
+  .video__heading{
+    color: $heading-color-dark;
+  }
+}
+
+@media only screen and(max-width: 768px) {
+  .video {
+    margin-bottom: 63px;
+  }
+}

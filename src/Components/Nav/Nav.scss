@@ -7,9 +7,11 @@
   padding-right: 30px;
   padding-left: 30px;
   overflow: overlay;
+  background-color: $bg-color-light;
 
   &::-webkit-scrollbar {
-    width: 0px;
+    display: none;
+    width: 8px;
     -ms-overflow-style: -ms-autohiding-scrollbar;
   }
 
@@ -31,7 +33,7 @@
 
   &:hover {
     &::-webkit-scrollbar {
-      width: 8px;
+      display: block;
     }
   }
 
@@ -84,6 +86,9 @@
 }
 
 .App--dark {
+  .nav {
+    background-color: $bg-color-dark;
+  }
   .nav__link {
     color: $nav-color-dark;
 
