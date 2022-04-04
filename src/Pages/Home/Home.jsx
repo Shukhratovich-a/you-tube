@@ -19,9 +19,9 @@ const Home = () => {
       const data = await response.json();
 
       if (data) {
-        setPostsTop(data.slice(0, 10));
-        setPostsRecommended(data.slice(10, 20));
-        setPostsBottom(data.slice(20, 30));
+        setPostsTop(data.slice(0, 20));
+        setPostsRecommended(data.slice(20, 40));
+        setPostsBottom(data.slice(40, 60));
       }
     })();
   }, []);
