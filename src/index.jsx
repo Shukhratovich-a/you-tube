@@ -4,13 +4,16 @@ import "./index.scss";
 import App from "./App";
 import { BrowserRouter } from "react-router-dom";
 import { Provider as NavProvider } from "./Context/Nav";
+import { Provider as TokenProvider } from "./Context/Token";
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <NavProvider>
-        <App />
-      </NavProvider>
+      <TokenProvider>
+        <NavProvider>
+          <App />
+        </NavProvider>
+      </TokenProvider>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")

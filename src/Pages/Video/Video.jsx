@@ -10,6 +10,7 @@ import More from "../../Components/Lib/Icons/More";
 import User from "../../Components/Lib/Icons/User";
 
 import "./Video.scss";
+import SubscribeButton from "../../Components/SubscribeButton/SubscribeButton";
 
 const Video = () => {
   const { videoId } = useParams();
@@ -89,7 +90,7 @@ const Video = () => {
             </button>
           </div>
 
-          <button className="video__button">Subscribe 2.3m</button>
+          <SubscribeButton />
         </div>
       </div>
 
