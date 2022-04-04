@@ -48,6 +48,7 @@
 
 .nav__list {
   margin: 0;
+  margin-bottom: 60px;
   padding: 0;
   list-style-type: none;
 }
@@ -83,6 +84,55 @@
       opacity: 1;
     }
   }
+}
+
+.subscriptions__heading {
+  margin: 0;
+  margin-bottom: 30px;
+  font-size: 18px;
+  line-height: 23px;
+}
+
+.nav__subscriptions {
+  margin-bottom: 60px;
+}
+
+.subscriptions__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.subscription {
+  & + & {
+    margin-top: 23px;
+  }
+}
+
+.subscription__link {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  line-height: 20px;
+  color: #898989;
+  text-decoration: none;
+}
+
+.subscription__avatar {
+  margin-right: 10px;
+}
+
+.nav__bottom__button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.nav__button__text {
+  display: block;
+  font-size: 16px;
+  line-height: 20px;
 }
 
 .App--dark {

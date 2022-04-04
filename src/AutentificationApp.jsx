@@ -9,10 +9,13 @@ import Channel from "./Pages/Channel/Channel";
 import Error from "./Pages/Error/Error";
 
 import "./App.scss";
+import useTheme from "./Hooks/useTheme";
 
 function AutentificationApp() {
+  const [theme] = useTheme();
+
   return (
-    <div className="App">
+    <div className={`App ${theme === 'dark' ? "App--dark" : ""}`}>
       <Header />
 
       <main className="main">

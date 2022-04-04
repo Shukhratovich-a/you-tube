@@ -1,5 +1,10 @@
 @import "../../Sass/Variables.scss";
 
+.channel{
+  flex-grow: 1;
+  padding-right: 70px;
+}
+
 .channel__banner {
   margin-bottom: 30px;
   border-radius: 14px;

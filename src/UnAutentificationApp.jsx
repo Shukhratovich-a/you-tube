@@ -28,8 +28,13 @@ const UnAutentificationApp = () => {
 
   return (
     <form className="form" onSubmit={handleSubmit}>
-      <input type={"text"} placeholder="Enter Email" name="email" />
-      <input type={"password"} placeholder="Enter Password" name="password" />
+      <input
+        type={"text"}
+        placeholder="Enter Email"
+        name="email"
+        defaultValue={"george.bluth@reqres.in"}
+      />
+      <input type={"password"} placeholder="Enter Password" name="password" defaultValue={"1234"} />
 
       <button className="form__button" type={"submit"}>
         Submit

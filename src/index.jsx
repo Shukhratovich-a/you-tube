@@ -5,14 +5,17 @@ import App from "./App";
 import { BrowserRouter } from "react-router-dom";
 import { Provider as NavProvider } from "./Context/Nav";
 import { Provider as TokenProvider } from "./Context/Token";
+import { Provider as ThemeProvider } from "./Context/Theme";
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <TokenProvider>
-        <NavProvider>
-          <App />
-        </NavProvider>
+        <ThemeProvider>
+          <NavProvider>
+            <App />
+          </NavProvider>
+        </ThemeProvider>
       </TokenProvider>
     </BrowserRouter>
   </React.StrictMode>,
